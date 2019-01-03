@@ -439,6 +439,103 @@
   margin-top: 80px;
 }
 
+.section-stories {
+  position: relative;
+  padding: 100px 0 50px;
+}
+
+.section-stories__title {
+  margin-bottom: 100px;
+}
+
+.section-stories__story {
+  width: 75%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 60px;
+  -webkit-transform: skewX(-12deg);
+          transform: skewX(-12deg);
+  margin-bottom: 80px;
+}
+
+.section-stories__story_text--subtitle {
+  margin-bottom: 12px;
+}
+
+.section-stories__story > * {
+  -webkit-transform: skewX(12deg);
+          transform: skewX(12deg);
+}
+
+.section-stories__story_shape {
+  width: 150px;
+  height: 150px;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  margin-right: 30px;
+  position: relative;
+}
+
+.section-stories__story_shape > img {
+  height: 100%;
+  -webkit-transform: translateX(-40px) scale(1.4);
+          transform: translateX(-40px) scale(1.4);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.section-stories__story_caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.section-stories__story:hover .section-stories__story_caption {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.section-stories__story:hover .section-stories__story_shape > img {
+  -webkit-transform: translateX(-40px) scale(1);
+          transform: translateX(-40px) scale(1);
+  -webkit-filter: blur(3px) brightness(80%);
+          filter: blur(3px) brightness(80%);
+}
+
+.section-stories__bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden;
+}
+
+.section-stories__bg-video_content {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
