@@ -1,0 +1,222 @@
+@media (max-width: 1685px)
+  .popup
+    &__right
+      padding: 20px 40px
+@media (max-width: 1580px)
+  .popup
+    &__paragraph
+      margin-bottom: 20px
+      font-size: 14px
+      column-count: 1
+    &__left
+      // width: 600%  
+@media (max-width: 1254px)
+  .popup
+    &__paragraph
+      line-height: 1.4
+  
+@media (max-width: 1200px)
+  .header
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%)
+  .popup
+    &__left
+      display: none
+    &__right
+      padding: 15px 20px
+
+  .container
+    max-width: 90%
+  .composition
+    width: 200px
+  .section-features
+    padding: 100px 0
+  .section-tours
+    padding: 160px 0 300px
+
+@media (max-width: 1080px)
+  .section-about
+    padding: 250px 0 450px
+    &__container
+      flex-direction: column
+    &__btn
+      margin-bottom: 60px
+    &__text
+      text-align: center
+    &__paragraph
+      margin: 0 auto 40px
+    &__img
+      margin: 0 auto
+      transform: translateX(-50%)
+  .section-title
+    max-width: 90%
+  .title-center
+    margin-bottom: 40px
+  
+  .section-book
+      &__book
+        background-image: linear-gradient(105deg, rgba($color-white, 0.9) 70%, transparent 70%), url(../img/nat-10.jpg)
+        &--form
+          width: 70%
+
+  .footer
+    padding: 60px 0
+    &__container
+      flex-direction: column
+      // justify-content: flex-start
+      align-items: center
+      text-align: center
+    &__navigation
+      margin-bottom: 40px
+
+@media (max-width: 920px)
+  .section-title
+    font-size: 26px
+    &:hover
+      cursor: default
+      transform: skewY(0) skewX(0) scale(1)
+      text-shadow: none
+
+  .navigation
+    &__button
+      top: 20px
+      right: 20px
+    &__background
+      top: 25px
+      right: 25px
+    &__link
+      font-size: 20px
+  .section-features
+    &__feature-box:hover
+      transform: translateY(0) scale(1)
+  .section-tours
+    padding: 150px 0 80px
+    &__flex-wrap
+      margin: 0 25px 50px
+    &__btn-green
+      margin-top: 50px
+    &__card
+      width: 312px
+      // position: relative
+      height: auto
+      background-color: $color-white
+      box-shadow: 0 15px 40px rgba($color-black, 0.15)
+      &--side
+        position: static
+        // top: 0
+        height: auto
+        border-radius: 3px
+        box-shadow: none
+        &-back
+          transform: rotateY(0)
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+      &--heading
+        right: 28px
+      &:hover &--side-front
+        transform: rotateY(0)
+      &--details
+        padding: 0
+      &--cta
+        position: relative
+        top: 0
+        left: 0
+        transform: translate(0)
+        width: 100%
+        // text-align: center
+        padding-top: 70px
+        padding-bottom: 50px
+      &--price-box
+        text-align: center
+        margin-bottom: 0
+
+@media (max-width: 860px)
+  .header
+    // padding: 100px
+    // height: 120vh
+    &__title
+      max-width: 90%
+      margin-top: 100px
+      &-main
+        font-size: 40px
+      &-sub
+        font-size: 16px
+    &__title > a
+      margin-bottom: 120px
+  .section-stories
+    &__story
+      width: 50%
+      text-align: center
+      transform: skewX(0)
+      & > *
+        transform: skewX(0deg)
+      &_shape
+        display: block
+        float: none
+        margin: 0 auto 40px
+
+@media (max-width: 680px)
+  .section-book
+    &__book
+      height: auto
+      background-image: linear-gradient(105deg, rgba($color-white, 0.9) 100%, transparent 100%), url(../img/nat-10.jpg)
+      &--form
+        width: 80%
+  .form
+    &__input
+      width: 100%
+    &__radio-group
+      width: 50%
+      &:last-child
+        margin-top: 20px
+
+@media (max-width: 560px)
+  body
+    font-size: 14px
+  .header
+    &__title
+      margin-top: 116px
+      &-main
+        letter-spacing: 20px
+        font-size: 25px
+      &-sub
+        letter-spacing: 2.6px
+        font-size: 14px
+    &__logo-box
+      top: 20px
+      left: 20px
+  .composition
+    width: 170px
+    &__photo
+      &--p2
+        left: 156px
+      &--p3
+        left: 86px
+  .section-book
+    &__book--form
+      padding: 40px 20px 40px 20px  
+  .form
+    // width: 90%
+    // margin: 0
+    padding: 0
+    &__group
+      width: 100%
+    &__input
+      width: 100%
+    &__radio-label
+      padding-left: 40px
+      font-size: 15px
+  .popup
+    &__subtitle
+      display: none
+    &__paragraph
+      display: none
+
+@media (max-width: 420px)
+  .section-about
+    padding: 200px 0 350px
+  .composition
+    width: 130px
+    &__photo
+      &--p2
+        left: 91px
+      &--p3
+        left: 47px

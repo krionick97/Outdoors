@@ -1,0 +1,53 @@
+.popup
+  height: 100vh
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background-color: rgba($color-black, 0.8)
+  z-index: 300
+  // display: none
+  opacity: 0
+  visibility: hidden
+  transition: 0.4s
+  // &:target
+  //   opacity: 1
+  //   visibility: visible
+  &__content
+    @include absCenter
+    width: 75%
+    // height: 500px
+    background-color: $color-white
+    box-shadow: 0 20px 40px rgba($color-white, 0.1)
+    border-radius: 3px
+    display: flex
+  &__title
+    margin-bottom: 20px
+  &__subtitle
+    margin-bottom: 15px
+  &__paragraph
+    margin-bottom: 40px
+    column-count: 2
+    column-gap: 40px
+    column-rule: 1px solid $color-grey-light-2
+  &__left
+    // overflow: hidden
+    // height: 100%
+    width: 500%
+  &__img
+    display: block
+    width: 100%
+    // height: 50%
+    // transform: translateX(-30px)
+  &__right
+    padding: 40px 60px
+    position: relative
+  &__close
+    cursor: pointer
+    display: inline-block
+    position: absolute
+    top: 0
+    right: 20px
+    font-size: 40px
+
+    

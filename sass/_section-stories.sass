@@ -1,0 +1,73 @@
+.section-stories
+  position: relative
+  padding: 100px 0 50px
+  // background-color: $color-grey-light-1
+  &__title
+    margin-bottom: 100px
+
+  &__story
+    width: 75%
+    margin: 0 auto
+    box-shadow: 0 30px 60px rgba($color-black, 0.1)
+    background-color: rgba($color-white, 0.6)
+    border-radius: 3px
+    padding: 60px
+    // padding-left: 90px
+    transform: skewX(-12deg)
+    margin-bottom: 80px
+    &_text
+      &--subtitle
+        margin-bottom: 12px
+    & > *
+      transform: skewX(12deg)
+    
+    &_shape
+      width: 150px
+      height: 150px
+      float: left
+      // background-color: orangered
+      shape-outside: circle(50% at 50% 50%)
+      -webkit-shape-outside: circle(50% at 50% 50%)
+      clip-path: circle(50% at 50% 50%)
+      -webkit-clip-path: circle(50% at 50% 50%)
+      margin-right: 30px
+      position: relative
+      // transform: translateX(-30px)
+      & > img
+        height: 100%
+        transform: translateX(-40px) scale(1.4)
+        transition: 0.2s
+
+    &_caption
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, 20%)
+      color: $color-white
+      text-transform: uppercase
+      font-size: 17px
+      text-align: center
+      opacity: 0
+      transition: 0.2s
+    &:hover &_caption
+      // cursor: default
+      opacity: 1
+      transform: translate(-50%, -50%)
+    &:hover &_shape > img
+      transform: translateX(-40px) scale(1)
+      filter: blur(3px) brightness(80%)
+    
+    // Bg-video
+  &__bg-video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    opacity: 0.1
+    overflow: hidden
+    &_content
+      width: 100%
+      height: 100%
+      object-fit: fill

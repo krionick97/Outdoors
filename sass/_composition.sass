@@ -1,0 +1,26 @@
+.composition
+  // display: block
+  position: relative
+  width: 300px
+  // display: inline-block
+  &__photo
+    width: 100%
+    box-shadow: 0 15px 40px rgba($color-black, 0.4)
+    border-radius: 2px
+    position: absolute
+    transition: .2s
+    outline-offset: 20px
+    &--p1
+      top: 0px
+      left: 0
+    &--p2
+      top: 20px
+      left: 240px
+    &--p3
+      top: 100px
+      left: 100px
+    &:hover
+      transform: scale(1.5) 
+      box-shadow: 0 25px 40px rgba($color-black, 0.5)
+      z-index: 2
+      outline: 15px solid $color-primary

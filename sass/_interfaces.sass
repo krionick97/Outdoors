@@ -1,0 +1,83 @@
+.form
+
+  &__group:not(:last-child)
+    margin-bottom: 10px
+
+  &__input
+    font-size: 15px
+    font-family: inherit
+    // color: inherit
+    padding: 15px 20px
+    border-radius: 2px
+    background-color: rgba($color-white, 0.5)
+    border: none
+    border-bottom: 3px solid transparent
+    width: 71%
+    box-sizing: border-box
+    display: block
+    transition: 0.2s
+    &:focus
+      outline: none
+      box-shadow: 0 10px 20px rgba($color-black, 0.1)
+      border-bottom: 3px solid $color-primary
+      &:invalid
+        border-bottom: 3px solid $color-secondary-dark
+    // &:input-placeholder
+    //   color: $color-grey-dark-2
+    // &:-webkit-input-placeholder
+    //   color: $color-grey-dark-2
+
+  &__label
+    font:
+      size: 12px
+      weight: 700
+    margin-left: 20px
+    margin-top: 7px
+    display: block
+    transition: 0.2s
+
+  &__input:placeholder-shown + &__label
+      opacity: 0
+      visibility: hidden
+
+  &__radio-group
+    width: 44%
+    display: inline-block
+
+  &__radio-label
+    font-size: $font-default-size
+    cursor: pointer
+    position: relative
+    padding-left: 50px
+  &__radio-input
+    display: none
+
+  &__radio-button
+    width: 20px
+    height: 20px
+    border: 5px solid $color-primary
+    border-radius: 50%
+    display: inline-block
+    position: absolute
+    left: 0
+    top: -5px
+    &:after
+      content: ''
+      display: block
+      height: 11px
+      width: 11px
+      position: absolute
+      border-radius: 50%
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      background-color: $color-primary
+      opacity: 0
+      transition: opacity 0.1s
+  &__button
+    margin-top: 25px
+    outline: none
+    border: none
+
+  &__radio-input:checked ~ &__radio-label &__radio-button:after
+    opacity: 1

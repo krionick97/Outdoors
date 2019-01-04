@@ -104,15 +104,14 @@
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   position: relative;
 }
 
 .header__logo-box {
   position: absolute;
   top: 40px;
-  left: 40px;
   left: 40px;
 }
 
@@ -261,10 +260,11 @@
 
 .composition {
   position: relative;
+  width: 300px;
 }
 
 .composition__photo {
-  width: 300px;
+  width: 100%;
   -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   border-radius: 2px;
@@ -320,6 +320,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .section-features__feature-box {
@@ -332,6 +337,7 @@
           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  margin: 0 10px 20px;
 }
 
 .section-features__feature-box:hover {
@@ -365,22 +371,35 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 550px;
+  height: 100%;
+}
+
+.section-tours__flex-wrap {
+  display: block;
+  margin: 0 15px 15px;
+  height: 100%;
 }
 
 .section-tours__card {
   position: relative;
+  top: 0;
+  left: 0;
   -webkit-perspective: 1500px;
           perspective: 1500px;
   width: 350px;
+  height: 550px;
 }
 
 .section-tours__card--picture {
   background-size: cover;
   height: 230px;
+  width: 100%;
   background-blend-mode: soft-light;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -771,6 +790,7 @@
   opacity: 0;
   -webkit-transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1);
   transition: 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+  visibility: hidden;
 }
 
 .navigation__list {
@@ -780,10 +800,16 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   list-style: none;
+  display: inline-block;
 }
 
 .navigation__item {
-  margin: 25px;
+  margin-bottom: 25px;
+}
+
+.navigation__link {
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .navigation__link span {
@@ -792,8 +818,6 @@
 
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
-  font-size: 30px;
-  font-weight: 300;
   color: #ffffff;
   padding: 10px 20px;
   text-decoration: none;
@@ -820,6 +844,7 @@
 .navigation__checkbox:checked ~ .navigation__nav {
   width: 100%;
   opacity: 1;
+  visibility: visible;
 }
 
 .navigation__icon {
@@ -930,7 +955,6 @@
 .popup__img {
   display: block;
   width: 100%;
-  height: 50%;
 }
 
 .popup__right {
@@ -1137,6 +1161,303 @@ body {
     opacity: 1;
     -webkit-transform: translate(0);
             transform: translate(0);
+  }
+}
+
+@media (max-width: 1685px) {
+  .popup__right {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 1580px) {
+  .popup__paragraph {
+    margin-bottom: 20px;
+    font-size: 14px;
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
+@media (max-width: 1254px) {
+  .popup__paragraph {
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+  .popup__left {
+    display: none;
+  }
+  .popup__right {
+    padding: 15px 20px;
+  }
+  .container {
+    max-width: 90%;
+  }
+  .composition {
+    width: 200px;
+  }
+  .section-features {
+    padding: 100px 0;
+  }
+  .section-tours {
+    padding: 160px 0 300px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .section-about {
+    padding: 250px 0 450px;
+  }
+  .section-about__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-about__btn {
+    margin-bottom: 60px;
+  }
+  .section-about__text {
+    text-align: center;
+  }
+  .section-about__paragraph {
+    margin: 0 auto 40px;
+  }
+  .section-about__img {
+    margin: 0 auto;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .section-title {
+    max-width: 90%;
+  }
+  .title-center {
+    margin-bottom: 40px;
+  }
+  .section-book__book {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 70%, transparent 70%), url(../img/nat-10.jpg);
+  }
+  .section-book__book--form {
+    width: 70%;
+  }
+  .footer {
+    padding: 60px 0;
+  }
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer__navigation {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 920px) {
+  .section-title {
+    font-size: 26px;
+  }
+  .section-title:hover {
+    cursor: default;
+    -webkit-transform: skewY(0) skewX(0) scale(1);
+            transform: skewY(0) skewX(0) scale(1);
+    text-shadow: none;
+  }
+  .navigation__button {
+    top: 20px;
+    right: 20px;
+  }
+  .navigation__background {
+    top: 25px;
+    right: 25px;
+  }
+  .navigation__link {
+    font-size: 20px;
+  }
+  .section-features__feature-box:hover {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+  }
+  .section-tours {
+    padding: 150px 0 80px;
+  }
+  .section-tours__flex-wrap {
+    margin: 0 25px 50px;
+  }
+  .section-tours__btn-green {
+    margin-top: 50px;
+  }
+  .section-tours__card {
+    width: 312px;
+    height: auto;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  .section-tours__card--side {
+    position: static;
+    height: auto;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .section-tours__card--side-back {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  }
+  .section-tours__card--heading {
+    right: 28px;
+  }
+  .section-tours__card:hover .section-tours__card--side-front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  .section-tours__card--details {
+    padding: 0;
+  }
+  .section-tours__card--cta {
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+  .section-tours__card--price-box {
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .header__title {
+    max-width: 90%;
+    margin-top: 100px;
+  }
+  .header__title-main {
+    font-size: 40px;
+  }
+  .header__title-sub {
+    font-size: 16px;
+  }
+  .header__title > a {
+    margin-bottom: 120px;
+  }
+  .section-stories__story {
+    width: 50%;
+    text-align: center;
+    -webkit-transform: skewX(0);
+            transform: skewX(0);
+  }
+  .section-stories__story > * {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  .section-stories__story_shape {
+    display: block;
+    float: none;
+    margin: 0 auto 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .section-book__book {
+    height: auto;
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 100%, transparent 100%), url(../img/nat-10.jpg);
+  }
+  .section-book__book--form {
+    width: 80%;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form__radio-group {
+    width: 50%;
+  }
+  .form__radio-group:last-child {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 14px;
+  }
+  .header__title {
+    margin-top: 116px;
+  }
+  .header__title-main {
+    letter-spacing: 20px;
+    font-size: 25px;
+  }
+  .header__title-sub {
+    letter-spacing: 2.6px;
+    font-size: 14px;
+  }
+  .header__logo-box {
+    top: 20px;
+    left: 20px;
+  }
+  .composition {
+    width: 170px;
+  }
+  .composition__photo--p2 {
+    left: 156px;
+  }
+  .composition__photo--p3 {
+    left: 86px;
+  }
+  .section-book__book--form {
+    padding: 40px 20px 40px 20px;
+  }
+  .form {
+    padding: 0;
+  }
+  .form__group {
+    width: 100%;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .form__radio-label {
+    padding-left: 40px;
+    font-size: 15px;
+  }
+  .popup__subtitle {
+    display: none;
+  }
+  .popup__paragraph {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-about {
+    padding: 200px 0 350px;
+  }
+  .composition {
+    width: 130px;
+  }
+  .composition__photo--p2 {
+    left: 91px;
+  }
+  .composition__photo--p3 {
+    left: 47px;
   }
 }
 /*# sourceMappingURL=style.css.map */
